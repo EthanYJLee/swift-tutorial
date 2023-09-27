@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ngt-hC-LeV">
+                                <rect key="frame" x="244" y="713" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchImageOnOff:" destination="BYZ-38-t0r" eventType="valueChanged" id="bKe-6V-obJ"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lzd-8X-31h">
+                                <rect key="frame" x="94" y="713" width="105" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Image 확대"/>
+                                <connections>
+                                    <action selector="btnResizeImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F3N-C9-kb8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전구 스위치" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="050-NH-FhU">
+                                <rect key="frame" x="229.66666666666663" y="674" width="78" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lamp_on.png" translatesAutoresizingMaskIntoConstraints="NO" id="33e-9a-RcW">
+                                <rect key="frame" x="16" y="59" width="183" height="294"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="294" id="HEP-hk-p6t"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="33e-9a-RcW" secondAttribute="trailing" constant="194" id="DbD-oO-XN9"/>
+                            <constraint firstItem="Ngt-hC-LeV" firstAttribute="leading" secondItem="lzd-8X-31h" secondAttribute="trailing" constant="45" id="EV1-X2-0bz"/>
+                            <constraint firstItem="lzd-8X-31h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="94" id="Qan-X2-pa5"/>
+                            <constraint firstItem="050-NH-FhU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="615" id="RZu-da-Sel"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lzd-8X-31h" secondAttribute="bottom" constant="70" id="TQ9-zM-yPt"/>
+                            <constraint firstItem="33e-9a-RcW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="W1C-Vg-CdD"/>
+                            <constraint firstItem="050-NH-FhU" firstAttribute="centerX" secondItem="Ngt-hC-LeV" secondAttribute="centerX" id="acM-A7-aRC"/>
+                            <constraint firstItem="lzd-8X-31h" firstAttribute="top" secondItem="Ngt-hC-LeV" secondAttribute="top" id="cqX-us-Uub"/>
+                            <constraint firstItem="33e-9a-RcW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ozX-C4-LBf"/>
+                            <constraint firstItem="lzd-8X-31h" firstAttribute="trailing" secondItem="33e-9a-RcW" secondAttribute="trailing" id="tnJ-tg-RQH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnResize" destination="lzd-8X-31h" id="7Fu-Xi-q6b"/>
+                        <outlet property="imgView" destination="33e-9a-RcW" id="aGv-fs-9gy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="lamp_on.png" width="1215" height="1920"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
